@@ -10,19 +10,20 @@ Make sure the Stack tests pass.
 3. What is the difference between using an array vs. a linked list when 
 implementing a Stack?
 """
-class Stack:
-    def __init__(self):
-        self.size = 0
-        # self.storage = ?
+# from singly_linked_list import LinkedList 
+# class Stack:
+#     def __init__(self):
+#         self.size = 0
+#         self.storage = []
 
-    def __len__(self):
-        pass
+#     def __len__(self):
+#         return len(self.storage)
 
-    def push(self, value):
-        pass
+#     def push(self, value):
+#         self.storage.append(value)
 
-    def pop(self):
-        pass
+#     def pop(self):
+#         self.storage.pop()
 
 
 #Class 
@@ -38,7 +39,7 @@ return elements in Last In First Out order.
    implementing a Stack?
 """
 import time
-from singly_linked_list.singly_linked_list import LinkedList
+from singly_linked_list import LinkedList
 class Stack:
     def __init__(self):
         self.size = 0
@@ -51,13 +52,3 @@ class Stack:
         if len(self.storage) == 0:
             return None
         return self.storage.remove_head()
-n = 100000
-stack = Stack()
-start = time.time()
-for i in range(n):
-    stack.push(i)
-print("Pushing (to front): ", time.time() - start)
-start = time.time()
-for i in range(n):
-    stack.pop()
-print("Popping (from front): ", time.time() - start)
