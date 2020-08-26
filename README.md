@@ -3,8 +3,11 @@
 Topics:
  * Singly Linked Lists
  * Queues and Stacks
+   Module 2
  * Doubly Linked Lists
+   Module 3
  * Binary Search Trees
+  
  * Related Code Challenge Problems
 
 Stretch Goals:

@@ -19,16 +19,6 @@ class BSTNode:
     def insert(self, value):
         pass
 
-new = []
-a = [];
-for (i=0, i < a.length(), i++) {
-    if a[i] mod 3 != 0
-        i++;
-    else:
-        new = new.append(a[i])
-}
-return new
-
 
 
 
