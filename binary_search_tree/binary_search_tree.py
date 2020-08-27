@@ -60,20 +60,44 @@ class BSTNode:
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self):
-        pass
+        # in order left - middle - right
+        if self.left:
+            self.left.in_order_print()
+        print(self.value)
+        if self.right:
+            self.right.in_order_print()
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self):
-        pass
+        nodes = [self]
+        while len(nodes) >  0:
+            node = nodes.pop(0)
+            print(node.value)
+            if node.left:
+                nodes.append(node.left)
+            if node.right:
+                nodes.append(node.right)
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self):
-        pass
+        stack = [self]
+        while len(stack) > 0:
+            node = stack.pop()
+            print(node.value)
+            if node.left:
+                stack.append(node.left)
+            if node.right:
+                stack.append(node.right)
+        
 
     # Stretch Goals -------------------------
     # Note: Research may be required
+
+    # Print in-order recursive DFT
+    def in_order_dft(self):
+        pass
 
     # Print Pre-order recursive DFT
     def pre_order_dft(self):
